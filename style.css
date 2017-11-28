@@ -1,0 +1,201 @@
+
+/* 
+CSS for swatch
+Jenni Whitman
+11/26/2017 
+*/
+/* This block is here to stop chrome from inserting its own styles
+Hashtag reset */
+* {
+  vertical-align : baseline;
+
+  margin         : 0;
+  padding        : 0;
+
+  background     : transparent;
+  font-size      : 100%;
+  border         : 0;
+  outline        : 0;
+}
+
+html, body {
+  height           : 100%;
+  background-color : #e2e2e2;
+  height: 100vh;
+}
+
+h1 {
+  font-size  : 6vw;
+  color      : #e2e2e2;
+
+  align-self : center;
+}
+
+label {
+  margin    : 5px;
+  font-size : 2vw;
+}
+
+input {
+  display       : block;
+
+  margin        : 5px;
+  margin-right  : 20px;
+  padding       : 12px 20px;
+
+  background    : transparent;
+  border        : none;
+  border-bottom : 2px solid #333;
+}
+
+.title {
+  display          : flex;
+
+  height           : 10%;
+  margin-top       : 0px;
+  margin-bottom    : 2px;
+
+  background-color : #333333;
+  box-shadow       : 0 1px 3px rgba(60,60,60,60.12), 0 1px 2px rgba(60,60,60,60.24);
+
+  justify-content  : space-around;
+  flex-direction   : column;
+  flex-wrap        : wrap;
+  align-items      : center;
+}
+
+.box-container, .grid-container, .grid {
+  display   : flex;
+  flex-wrap : nowrap;
+  justify-content : space-around;
+  flex-direction  : row;
+}
+
+
+.row{
+  display         : flex;
+
+  height          : 20%;
+  width           : 100%;
+
+  justify-content : space-around;
+  flex-direction  : column;
+  flex-wrap       : wrap;
+}
+
+.box, .square {
+  position   : relative;
+  box-sizing : border-box;
+
+  margin     : 1%;
+
+  box-shadow : 0 1px 3px rgba(60,60,60,60.12), 0 1px 2px rgba(60,60,60,60.24);
+
+  transition : all 0.3s cubic-bezier(.25,.8,.25,1);
+
+  flex-basis : calc(33.333% - 10px);
+}
+
+.box::before, .square::before {
+  content     : '';
+
+  display     : block;
+
+  padding-top : 100%;
+}
+
+.box:hover {
+  box-shadow : 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transform  : scale(1.05);
+}
+
+.box:active, .square:active {
+  box-shadow : 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+  transform  : scale(.9);
+}
+
+.box .content, .square .content {
+  position        : absolute;
+  display         : flex;
+  bottom          : 0;
+
+  height          : 100%;
+  width           : 100%;
+
+  text-align      : center;
+
+  flex-wrap       : wrap;
+  flex-direction  : column;
+  justify-content : center;
+}
+
+.icon {
+  font-size : 8vw;
+}
+
+.icon:hover{
+  filter : invert(100%);
+}
+
+.content > p {
+  font-size      : 2vw;
+  text-transform : uppercase;
+}
+
+#error {
+  position : relative;
+  text-align: center;
+  display  : none;
+
+  width    : 100%;
+  flex-wrap       : wrap;
+  flex-direction  : column;
+  justify-content : center;
+  color    : #b24718;
+}
+
+.btn {
+  position        : relative;
+
+  padding         : 10px 20px;
+
+  cursor          : pointer;
+  background      : #333333;
+  font-size       : 2vw;
+  color           : #e2e2e2;
+  text-decoration : none;
+  border-style    : none;
+  box-shadow      : 0 1px 3px rgba(60,60,60,60.12), 0 1px 2px rgba(60,60,60,60.24);
+
+  transition      : all 0.5s linear;
+}
+
+.btn:hover {
+  /* filter : invert(100%); */
+  box-shadow : 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transform  : scale(1.05);
+}
+
+.btn:active {
+  box-shadow : 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  transform  : scale(.9);
+}
+
+.roll, #grid-form{
+  display         : flex;
+
+  /* float           : left; */
+  width           : 100%;
+
+  align-items     : center;
+  justify-content : center;
+}
+
+#create-grid{
+  clear : both;
+}
+
+#reroll {
+  width   : 20%;
+  padding : 3%;
+}

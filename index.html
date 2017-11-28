@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#333333">
+    <meta name="theme-color" content="#e2e2e2">
+    <title>swatch</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+  </head>
+  <body onload="start();">
+    <div class="title"><h1>swatch</h1></div>
+    <div class="box-container">
+      <div class="box">
+        <div class="content" id="bg-color">
+          <div class="icon">+</div>
+          <p></p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="content" id="bg-color">
+          <div class="icon">+</div>
+          <p></p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="content" id="bg-color">
+          <div class="icon">+</div>
+          <p></p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="content" id="bg-color">
+          <div class="icon">+</div>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <div class="box-container">
+      <div class="box">
+        <div class="content" id="bg-color">
+          <div class="icon">+</div>
+          <p></p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="content" id="bg-color">
+          <div class="icon">+</div>
+          <p></p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="content" id="bg-color">
+          <div class="icon">+</div>
+          <p></p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="content" id="bg-color">
+          <div class="icon">+</div>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class='roll'>
+        <button class="btn" id="reroll" onclick="reroll();">
+        Roll
+        </button>
+      </div>
+      <div id="grid-form">
+        <label for="num-squares"> Number of Boxes: </label>
+        <input id='num-squares' type='number' name="quantity" min="1" max="5" value='3'></br>
+        <button class="btn" id="create-grid" onclick="changeGrid();">Create Grid</button>
+      </div>
+      <div class="hidden" id="error"></div>
+    </div>
+    <div id="grid-container">
+    </div>
+  </body>
+</html>

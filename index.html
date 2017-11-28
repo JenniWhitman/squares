@@ -8,12 +8,13 @@
     <link rel="manifest" href="/manifest.json">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#333333">
     <meta name="theme-color" content="#e2e2e2">
-    <title>swatch</title>
+    <title>Swatch</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
   </head>
   <body onload="start();">
-    <div class="title"><h1>swatch</h1></div>
+    <div class="title"><h1>Swatch</h1></div>
     <div class="box-container">
       <div class="box">
         <div class="content" id="bg-color">
@@ -71,6 +72,19 @@
         <button class="btn" id="reroll" onclick="reroll();">
         Roll
         </button>
+        <label class="btn" id="help" for="modal">Using Swatch</label>
+        <input class="modal-state" id="modal" type="checkbox" />
+          <div class="modal">
+            <label class="modal__bg" for="modal"></label>
+            <div class="modal__inner">
+              <label class="modal__close" for="modal"></label>
+              <h2>Using Swatch</h2>
+              <p>Boxes in the upper grid contain a randomly generated color. Boxes on the bottom can take on those colors.</p>
+              <p><strong>How?</strong></p>
+              <p>Click a box up top and then select a white box in the grid below to make it that color.  </p>
+              <p>If you would like more white boxes to hold colors, change the number of boxes and select create grid.</p>
+            </div>
+          </div>
       </div>
       <div id="grid-form">
         <label for="num-squares"> Number of Boxes: </label>
